@@ -35,7 +35,7 @@ class Trie:
    
     def contains(self,string):
 
-        """Checks if a trie cotains a word or substring of word
+        """Checks if a trie contains a word or substring of word
 
         Args:
             string (string): word to be searched
