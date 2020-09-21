@@ -26,10 +26,11 @@ class DoublyLinkedList:
             self.__size += 1
         else:
             newNode = Node(value)
+            nextNode = self.__sentinel.next
             self.__sentinel.next = newNode
             newNode.prev = self.__sentinel
-            newNode.next = self.__tail
-            self.__tail.prev = newNode
+            newNode.next = nextNode
+            nextNode.prev = newNode
             self.__size += 1
 
     def addAtTail(self, value):
@@ -114,7 +115,10 @@ class DoublyLinkedList:
         Returns:
             Any: value at the tail end of the list.
         """
-        return self.__head.next.value
+        if self.__size == 0:
+            return None
+        else:
+            return self.__head.next.value
 
     def getTail(self):
         """Get value at the tail of the list.

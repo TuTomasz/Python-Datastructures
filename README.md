@@ -3,6 +3,8 @@
 * Stack
 * Queue
 * Singly LinkedList
-* Priority Queue
-* Binary Tree
+* Doubley LinkedList
+* Max Heap
+* Min Heap
+* Trie
 
