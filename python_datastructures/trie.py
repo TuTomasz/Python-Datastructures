@@ -1,23 +1,21 @@
 class Trie:
     # Static variables
-    wordcount = 0 
+    wordcount = 0
 
     def __init__(self):
         self.__root = {}
         self.__end = ""
-        
 
-    def build(self,array):
+    def build(self, array):
         """Builds a trie structure given array of words
-        
+
         Args:
             array ([string]): array of words
         """
         for el in array:
             self.add(el)
 
-   
-    def add(self,string):
+    def add(self, string):
         """Add word to the trie structure
 
         Args:
@@ -31,10 +29,8 @@ class Trie:
                 node[char] = {}
             node = node[char]
         node[self.__end] = '*'
-    
-   
-    def contains(self,string):
 
+    def contains(self, string):
         """Checks if a trie contains a word or substring of word
 
         Args:
@@ -53,7 +49,6 @@ class Trie:
                 node = node[char]
         return True
 
+
 if __name__ == "__main__":
     pass
-
-   

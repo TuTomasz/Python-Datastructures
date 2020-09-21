@@ -1,5 +1,5 @@
 import unittest
-from python_datastructures.doublylinkedlist import DoublyLinkedList
+from python_datastructures import DoublyLinkedList
 
 class Test_Queue(unittest.TestCase):
 

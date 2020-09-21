@@ -1,6 +1,8 @@
 from python_datastructures.doublylinkedlist import DoublyLinkedList
 
 # Node helper class
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -8,6 +10,8 @@ class Node:
         self.previous = None
 
 # Queue implementation using a doubly-linked-list.
+
+
 class Queue:
     def __init__(self):
         self.__queue = DoublyLinkedList()
@@ -71,4 +75,3 @@ class Queue:
 
 if __name__ == "__main__":
     pass
-    

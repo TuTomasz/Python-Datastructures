@@ -6,6 +6,8 @@ class Node:
         self.next = None
 
 # Implementation of SinglyLinkedList
+
+
 class SinglyLinkedList():
     def __init__(self):
         self.__sentinel = Node(None)

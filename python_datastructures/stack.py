@@ -1,6 +1,8 @@
 from python_datastructures.linkedlist import SinglyLinkedList
 
 # Stack implementation using a singly-linked-list.
+
+
 class Stack:
     def __init__(self):
         self.__stack = SinglyLinkedList()
