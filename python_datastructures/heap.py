@@ -61,10 +61,10 @@ class MinHeap:
             parentIdx = (currentIdx - 1) // 2
 
     def peek(self):
-        """Look up the smalest element 
+        """Look up the smallest element 
 
         Returns:
-            Number: heap smalest element
+            Number: heap smallest element
         """
         return self.heap[0]
 
@@ -82,7 +82,7 @@ class MinHeap:
         """Remove Smallest element from the heap
 
         Returns:
-            number: smalest element in the heap
+            number: smallest element in the heap
         """
 
         self.swap(0, len(self.heap)-1, self.heap)
@@ -92,7 +92,7 @@ class MinHeap:
 
 
     def swap(self, i,j,heap):
-        """Helper methood for swaping elements in the heap
+        """Helper method for swapping elements in the heap
 
         Args:
             i (index): element one index
@@ -202,7 +202,7 @@ class MaxHeap:
         return removed
     
     def swap(self,i,j,heap):
-        """Helper methood for swaping elements in the heap
+        """Helper method for swapping elements in the heap
 
         Args:
             i (index): element one index
