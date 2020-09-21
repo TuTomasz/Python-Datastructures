@@ -4,3 +4,4 @@ from .trie import Trie
 from .stack import Stack
 from .queue import Queue
 from .linkedlist import SinglyLinkedList
+from .doublylinkedlist import DoublyLinkedList
