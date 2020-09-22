@@ -2,7 +2,7 @@
 
 # Python-Datastructures
 
-Python-Datastructures is a Python library containing  implementations of various data structures in Python that can be used in your projects. Useful when preparing for interviews or buiding school projects. Focus on developing your algorithms and not worry about finding python implementations of classic data structures.
+Python-Datastructures is a Python library containing implementations of various data structures in Python that can be used in your projects. Useful when preparing for interviews or building school projects. Focus on developing your algorithms and not worry about finding python implementations of classic data structures.
 
 ## Installation
 
@@ -15,13 +15,13 @@ pip install python-datastructures
 ## Usage
 Sample usage of the library. Import any datastructure from the list of supported datastructures.
 
-* Stack
+* Stack 
 * Queue
 * SinglyLinkedList
 * DoublyLinkedList
 * MaxHeap
 * MinHeap
-* Trie
+* Trie 
 
 ```python
 from python_datastructures import Stack
@@ -30,15 +30,15 @@ stack = Stack()
 stack.push(3)
 stack.push(4)
 
-print(stack) # returns [3,4]
+print(stack) # returns [4, 3]
 ```
-## Datastructure Methods
+## Datastructure details
 
-<div align="center"> <h2>Stack</h2></div>
+<div align="center"> <h2>Stack </h2></div>
 
 |  Methood  | Description                               | Args  | Return  |
 |:---------:|-------------------------------------------|-------|---------|
-| push()    | Add element to the top of the stack.      | value | None    |
+| push()    | Add element to the top of the stack.      | Value | None    |
 | pop()     | Remove element from the top of the stack. | None  | Node   |
 | peek()    | View top element in the stack.            | None  | value   |
 | isEmpty() | Check if stack is empty.                  | None  | Boolean |
@@ -70,6 +70,7 @@ print(stack) # returns [3,4]
 <br></br>
 <div align="center"> <h2>Min/Max Heap</h2></div>
 
+
 |  Methood | Description                           | Args  | Return |
 |:--------:|---------------------------------------|-------|--------|
 | build()  | Build a Heap from Array of Elements   | Array | Array  |
@@ -77,9 +78,17 @@ print(stack) # returns [3,4]
 | add()    | Add element to the Heap.              | Value | None   |
 | remove() | Remove Smallest element from the Heap | None  | Value  |
 
+<br></br>
+<div align="center"> <h2>Singly LinkedList</h2></div>
 
-
-
+|  Methood  | Description                                 | args  | return  |
+|:---------:|---------------------------------------------|-------|---------|
+| add()     | Add element to linked list.                 | Value | None    |
+| remove()  | Remove node from linkedlist.                | None  | Value   |
+| getHead() | Get value of the linkedlist head node.      | None  | Value   |
+| isEmpty() | Checks if linkedlist is empty.              | Value | Boolean |
+| getSize() | Return size of the linkedlist.              | None  | Value   |
+| \__str__() | Return String representation of linkedlist. | None  | String  |
 
 
 <br></br>
