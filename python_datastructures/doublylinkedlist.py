@@ -65,7 +65,7 @@ class DoublyLinkedList:
             self.__sentinel.next = None
             nodeToRemove.prev = None
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
         else:
             nodeToRemove = self.__head.next
             nextNode = nodeToRemove.next
@@ -74,7 +74,7 @@ class DoublyLinkedList:
             nodeToRemove.next = None
             nodeToRemove.prev = None
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
 
     def removeAtTail(self):
         """Remove node at tail end.
@@ -91,7 +91,7 @@ class DoublyLinkedList:
             self.__head = self.__sentinel
             self.__tail = self.__sentinel
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
         else:
             nodeToRemove = self.__tail
             previous = nodeToRemove.prev
@@ -99,7 +99,7 @@ class DoublyLinkedList:
             previous.next = None
             self.__tail = previous
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
 
     def isEmpty(self):
         """Check if linkedlist is empty

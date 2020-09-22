@@ -44,13 +44,13 @@ class SinglyLinkedList():
             self.__sentinel.next = None
             self.__head = self.__sentinel
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
         else:
             nodeToRemove = self.__head
             self.__sentinel.next = self.__head.next
             self.__head = self.__sentinel.next
             self.__size -= 1
-            return nodeToRemove.value
+            return nodeToRemove
 
     def getHead(self):
         """Get value of the linkedlist head node.

@@ -15,7 +15,7 @@ class Stack:
         self.__stack.add(value)
 
     def pop(self):
-        """Remove the top element ins the stack.
+        """Remove element from the top of the stack.
 
         Returns:
             Element: top of the stack.
