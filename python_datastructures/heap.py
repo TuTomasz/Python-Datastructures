@@ -1,6 +1,4 @@
-
 class MinHeap:
-
     def __init__(self, array):
         """Initialize a min Heap
 
@@ -17,7 +15,7 @@ class MinHeap:
         Returns:
             array: Heap representation of the array
         """
-        firstParrentIdx = (len(array) - 1 // 2)
+        firstParrentIdx = len(array) - 1 // 2
         for currentIdx in reversed(range(firstParrentIdx)):
             self.siftDown(currentIdx, len(array) - 1, array)
         return array
@@ -127,7 +125,7 @@ class MaxHeap:
         Returns:
             array: Heap representation of the array
         """
-        firstParrentIdx = (len(array) - 1 // 2)
+        firstParrentIdx = len(array) - 1 // 2
         for currentIdx in reversed(range(firstParrentIdx)):
             self.siftDown(currentIdx, len(array) - 1, array)
         return array

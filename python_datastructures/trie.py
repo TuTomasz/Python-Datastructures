@@ -28,7 +28,7 @@ class Trie:
             if char not in node:
                 node[char] = {}
             node = node[char]
-        node[self.__end] = '*'
+        node[self.__end] = "*"
 
     def contains(self, string):
         """Checks if a trie contains a word or substring of word

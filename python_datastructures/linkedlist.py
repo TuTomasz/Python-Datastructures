@@ -1,14 +1,14 @@
-
 # Node helper class
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
 
+
 # Implementation of SinglyLinkedList
 
 
-class SinglyLinkedList():
+class SinglyLinkedList:
     def __init__(self):
         self.__sentinel = Node(None)
         self.__head = self.__sentinel
@@ -32,7 +32,7 @@ class SinglyLinkedList():
             self.__size += 1
 
     def remove(self):
-        """ Remove node from linkedlist.
+        """Remove node from linkedlist.
 
         Returns:
             Any: returns value of the node.

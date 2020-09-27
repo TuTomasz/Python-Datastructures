@@ -4,7 +4,7 @@ from python_datastructures.trie import Trie
 
 class Test_Trie(unittest.TestCase):
     def setUp(self):
-        words = ['apple', 'app', 'android', 'and']
+        words = ["apple", "app", "android", "and"]
         self.trie = Trie()
         self.trie.build(words)
 
