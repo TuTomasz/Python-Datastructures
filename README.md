@@ -2,7 +2,7 @@
 
 # Python-Datastructures
 
-Python-Datastructures is a Python library containing implementations of various data structures in Python that can be used in your projects. Useful when preparing for interviews or building school projects. Focus on developing your algorithms and not worry about finding python implementations of classic data structures.
+Python-Datastructures is a Python library containing implementations of various data structures written purely in Python. Useful when preparing for interviews or building school projects. Allow the user to focus on developing your algorithms and not worry about findimng python implementations of classic data structures.
 
 ## Installation
 
@@ -88,7 +88,7 @@ print(stack) # returns [4, 3]
 | getHead() | Get value of the linkedlist head node.      | None  | Value   |
 | isEmpty() | Checks if linkedlist is empty.              | Value | Boolean |
 | getSize() | Return size of the linkedlist.              | None  | Value   |
-| \__str__() | Return String representation of linkedlist. | None  | String  |
+| _ _str__() | Return String representation of linkedlist. | None  | String  |
 
 
 <br></br>
