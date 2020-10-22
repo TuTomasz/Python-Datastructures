@@ -1,5 +1,5 @@
 import unittest
-from python_datastructures.linkedlist import SinglyLinkedList
+from python_datastructures.linkedList import SinglyLinkedList
 
 
 class Test_Queue(unittest.TestCase):

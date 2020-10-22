@@ -1,4 +1,4 @@
-from python_datastructures.doublylinkedlist import DoublyLinkedList
+from python_datastructures.doublyLinkedList import DoublyLinkedList
 
 # Node helper class
 

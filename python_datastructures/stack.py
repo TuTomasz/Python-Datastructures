@@ -1,4 +1,4 @@
-from python_datastructures.linkedlist import SinglyLinkedList
+from python_datastructures.linkedList import SinglyLinkedList
 
 # Stack implementation using a singly-linked-list.
 
