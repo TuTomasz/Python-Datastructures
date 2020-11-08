@@ -4,3 +4,4 @@ from .stack import Stack
 from .queue import Queue
 from .linkedList import SinglyLinkedList
 from .doublyLinkedList import DoublyLinkedList
+from .circularList import CircularList
