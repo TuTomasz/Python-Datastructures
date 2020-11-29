@@ -18,6 +18,7 @@ build:
 	@echo 🏗️ Initializing New Build
 	make -k clean 
 	make test
+	make validate
 	make lint
 	@echo 🔧 Building Packages
 	poetry build
@@ -31,6 +32,11 @@ install-build:
 uninstall-build:
 	@echo 💿 UnInstall build 
 	pip uninstall python-datastructures
+
+# check if package properly imports
+validate:
+	@echo ✅ validate package
+	poetry run python -c 'import python_datastructures; print(python_datastructures.__package__ + " successfully imported")'
 
 # publish to pypi
 publish:
