@@ -56,8 +56,4 @@ class Stack:
 
 
 if __name__ == "__main__":
-    
-    s = Stack()
-    s.push(4)
-
-    print(s)
+    pass

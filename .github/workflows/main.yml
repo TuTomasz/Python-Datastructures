@@ -1,4 +1,3 @@
-# This is a basic workflow to help you get started with Actions
 
 name: Test Build
 
@@ -10,12 +9,11 @@ on:
   pull_request:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+# Set python environment
 env:
   PYTHON_VERSION: 3.8
-  
+
+# Job Descriptions
 jobs:
   code_analysis:
     name: Code Analysis
@@ -33,6 +31,8 @@ jobs:
         run: make setup
       - name: Run Lint
         run: make lint
+      - name: Validate Package Imports
+        run: make validate
       - name: Run Tests
         run: make test
 
