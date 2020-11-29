@@ -1,4 +1,4 @@
-from python_datastructures.linkedList import SinglyLinkedList
+from python_datastructures.linkedlist import SinglyLinkedList
 
 # Stack implementation using a singly-linked-list.
 
@@ -56,4 +56,8 @@ class Stack:
 
 
 if __name__ == "__main__":
-    pass
+    
+    s = Stack()
+    s.push(4)
+
+    print(s)

@@ -1,5 +1,4 @@
-from python_datastructures.doublyLinkedList import DoublyLinkedList
-
+from python_datastructures.doublylinkedlist import DoublyLinkedList
 # Node helper class
 
 
@@ -75,4 +74,6 @@ class Queue:
 
 
 if __name__ == "__main__":
-    pass
+    q = Queue()
+    q.enqueue(3)
+    print(q)
