@@ -1,5 +1,11 @@
+from typing import TypeVar
+
+
+T = TypeVar("T")
+
+
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: T):
         self.value = value
         self.next = None
         self.prev = None
@@ -12,12 +18,10 @@ class DoublyLinkedList:
         self.__tail = self.__sentinel
         self.__size = 0
 
-    def addAtHead(self, value):
-        """Add node at head end.
+    def addAtHead(self, value: T) -> None:
 
-        Args:
-            value (Any): value to be added.
-        """
+        """Add node at head end."""
+
         if self.__size == 0:
             newNode = Node(value)
             self.__sentinel.next = newNode
@@ -33,12 +37,10 @@ class DoublyLinkedList:
             nextNode.prev = newNode
             self.__size += 1
 
-    def addAtTail(self, value):
-        """Add node at tail end.
+    def addAtTail(self, value: T) -> None:
 
-        Args:
-            value (Any): value to be added.
-        """
+        """Add node at tail end."""
+
         if self.__size == 0:
             newNode = Node(value)
             self.__sentinel.next = newNode
@@ -53,11 +55,9 @@ class DoublyLinkedList:
             self.__size += 1
 
     def removeAtHead(self):
-        """Remove node at head end.
 
-        Returns:
-            Any: returns value of the node.
-        """
+        """Remove node at head end."""
+
         if self.__size == 0:
             return None
         elif self.__size == 1:
@@ -77,11 +77,9 @@ class DoublyLinkedList:
             return nodeToRemove
 
     def removeAtTail(self):
-        """Remove node at tail end.
 
-        Returns:
-            Any: returns value of the node.
-        """
+        """Remove node at tail end."""
+
         if self.__size == 0:
             return None
         elif self.__size == 1:
@@ -101,55 +99,43 @@ class DoublyLinkedList:
             self.__size -= 1
             return nodeToRemove
 
-    def isEmpty(self):
-        """Check if linkedlist is empty
+    def isEmpty(self) -> bool:
 
-        Returns:
-            Boolean: True if list empty else False
-        """
+        """Check if linkedlist is empty"""
+
         return True if self.__size == 0 else False
 
     def getHead(self):
-        """Get value at the front end of the list.
 
-        Returns:
-            Any: value at the tail end of the list.
-        """
+        """Get value at the front end of the list."""
+
         if self.__size == 0:
             return None
         else:
             return self.__head.next.value
 
-    def getTail(self):
-        """Get value at the tail of the list.
+    def getTail(self) -> T:
 
-        Returns:
-            Any: value at the tail end of the list.
-        """
+        """Get value at the tail of the list."""
+
         return self.__tail.value
 
-    def getSize(self):
-        """Get length of the linked list.
+    def getSize(self) -> int:
 
-        Returns:
-            Integer: Size of the doubly linkedlist.
-        """
+        """Get length of the linked list."""
+
         return self.__size
 
-    def __len__(self):
-        """Get length of the linked list.
+    def __len__(self) -> int:
 
-        Returns:
-            Integer: Size of the doubly linkedlist.
-        """
+        """Get length of the linked list."""
+
         return self.__size
 
-    def __str__(self):
-        """Return String representation of linkedlist values.
+    def __str__(self) -> str:
 
-        Returns:
-            String: String representation of linkedlist.
-        """
+        """Return String representation of linkedlist values."""
+
         arr = []
         current = self.__head.next
         while current:

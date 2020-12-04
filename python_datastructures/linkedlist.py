@@ -1,6 +1,11 @@
+from typing import TypeVar
+
+
+T = TypeVar("T")
+
 # Node helper class
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: T):
         self.value = value
         self.next = None
 
@@ -14,12 +19,10 @@ class SinglyLinkedList:
         self.__head = self.__sentinel
         self.__size = 0
 
-    def add(self, value):
-        """Add element to linked list.
+    def add(self, value: T) -> None:
 
-        Args:
-            value (Any): value to be added.
-        """
+        """Add element to linked list."""
+
         newNode = Node(value)
         if self.__size == 0:
             self.__head.next = newNode
@@ -32,14 +35,12 @@ class SinglyLinkedList:
             self.__size += 1
 
     def remove(self):
-        """Remove node from linkedlist.
 
-        Returns:
-            Any: returns value of the node.
-        """
+        """Remove node from linkedlist."""
+
         if self.__size == 0:
             return None
-        elif self.__size == 1:
+        if self.__size >= 1:
             nodeToRemove = self.__head
             self.__sentinel.next = None
             self.__head = self.__sentinel
@@ -52,36 +53,34 @@ class SinglyLinkedList:
             self.__size -= 1
             return nodeToRemove
 
-    def getHead(self):
-        """Get value of the linkedlist head node.
+    def getHead(self) -> T:
 
-        Returns:
-            Any: value of the head of the linkedlist.
-        """
+        """Get value of the linkedlist head node."""
+
         return self.__head.value
 
-    def getSize(self):
-        """Return size of the linkedlist.
+    def getHeadNode(self) -> Node:
 
-        Returns:
-            Integer: number of nodes in the linkedlist.
-        """
+        """Get head node referance."""
+
+        return self.__head
+
+    def getSize(self) -> int:
+
+        """Return size of the linkedlist."""
+
         return self.__size
 
-    def isEmpty(self):
-        """Checks if linkedlist is empty.
+    def isEmpty(self) -> bool:
 
-        Returns:
-            Boolean: Return True if linkedlist is empty else False.
-        """
+        """Checks if linkedlist is empty."""
+
         return True if self.__size == 0 else False
 
-    def __str__(self):
-        """Return String representation of linkedlist values.
+    def __str__(self) -> str:
 
-        Returns:
-            String: String representation of linkedlist.
-        """
+        """Return String representation of linkedlist values."""
+
         arr = []
         current = self.__head
         while current:

@@ -1,5 +1,11 @@
+from typing import TypeVar
+
+
+T = TypeVar("T")
+
+
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: T):
         self.value = value
         self.left = None
         self.right = None

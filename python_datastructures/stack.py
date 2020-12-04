@@ -1,57 +1,48 @@
 from python_datastructures.linkedlist import SinglyLinkedList
+from typing import TypeVar
+
+
+T = TypeVar("T")
 
 # Stack implementation using a singly-linked-list.
-
-
 class Stack:
     def __init__(self):
         self.__stack = SinglyLinkedList()
 
-    def push(self, value):
-        """Add element to the top of the stack.
-        Args:
-            Element (string,integer): add element to the top of the stack.
-        """
+    def push(self, value: T) -> None:
+
+        """Add element to the top of the stack."""
+
         self.__stack.add(value)
 
-    def pop(self):
-        """Remove element from the top of the stack.
+    def pop(self) -> T:
 
-        Returns:
-            Element: top of the stack.
-        """
-        self.__stack.remove()
+        """Remove element from the top of the stack."""
 
-    def peek(self):
-        """View top element in the stack.
+        return self.__stack.remove()
 
-        Returns:
-            Element: top of the stack.
-        """
+    def peek(self) -> T:
+
+        """View top element in the stack."""
+
         return self.__stack.getHead()
 
-    def isEmpty(self):
-        """Check if stack is empty.
+    def isEmpty(self) -> bool:
 
-        Returns:
-            boolean: True if no elements in the stack else False.
-        """
+        """Check if stack is empty."""
+
         return True if self.__stack.getSize() == 0 else False
 
-    def getSize(self):
-        """Get size of the stack.
+    def getSize(self) -> int:
 
-        Returns:
-            integer: number of elements in the stack.
-        """
+        """Get size of the stack."""
+
         return self.__stack.getSize()
 
-    def __str__(self):
-        """Get string representation of the stack.
+    def __str__(self) -> str:
 
-        Returns:
-            Array: prints string representation of the stack.
-        """
+        """Get string representation of the stack."""
+
         return self.__stack.__str__()
 
 

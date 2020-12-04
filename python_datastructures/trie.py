@@ -1,3 +1,9 @@
+from typing import TypeVar
+
+
+T = TypeVar("T")
+
+
 class Trie:
     # Static variables
     wordcount = 0
@@ -6,21 +12,17 @@ class Trie:
         self.__root = {}
         self.__end = ""
 
-    def build(self, array):
-        """Builds a trie structure given array of words
+    def build(self, array: list) -> None:
 
-        Args:
-            array ([string]): array of words
-        """
+        """Builds a trie structure given array of words"""
+
         for el in array:
             self.add(el)
 
-    def add(self, string):
-        """Add word to the trie structure
+    def add(self, string: str) -> None:
 
-        Args:
-            string (string): add word to the trie structure
-        """
+        """Add word to the trie structure"""
+
         self.wordcount += 1
         node = self.__root
         for i in range(len(string)):
@@ -30,15 +32,9 @@ class Trie:
             node = node[char]
         node[self.__end] = "*"
 
-    def contains(self, string):
-        """Checks if a trie contains a word or substring of word
+    def contains(self, string: str) -> bool:
 
-        Args:
-            string (string): word to be searched
-
-        Returns:
-            boolean: True if word present else False
-        """
+        """Checks if a trie contains a word or substring of word"""
 
         node = self.__root
         for i in range(len(string)):

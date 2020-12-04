@@ -56,4 +56,8 @@ test:
 lint:
 	@echo ♻️ Reformatting Code
 	poetry run black .
+	@echo 🧪 Type Checks with MyPy
+	poetry run mypy python_datastructures/
+	@echo 🧪 Type Checks with MyPy
+	#poetry run pylint ./python_datastructures/*.py 
 

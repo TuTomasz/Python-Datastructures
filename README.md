@@ -2,7 +2,7 @@
 ![Test Build](https://github.com/TuTomasz/Python-Datastructures/workflows/Test%20Build/badge.svg)
 # Python-Datastructures
 
-Python-Datastructures is a Python library containing implementations of various data structures written purely in Python. Useful when preparing for interviews or building school projects. Allow the user to focus on developing your algorithms and not worry about findimng python implementations of classic data structures.
+Python-Datastructures is a Python library containing implementations of various data structures written purely in Python. Useful when preparing for interviews or building school projects. Allow the user to focus on developing your algorithms and not worry about finding python implementations of classic data structures.
 
 ## Installation
 
