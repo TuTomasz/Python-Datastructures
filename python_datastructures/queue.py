@@ -1,9 +1,10 @@
+"""In computer science, a queue is a collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence."""
+
 from python_datastructures.doublylinkedlist import DoublyLinkedList
 from typing import TypeVar
 
 
 T = TypeVar("T")
-# Node helper class
 
 
 class Node:
@@ -11,9 +12,6 @@ class Node:
         self.value = value
         self.next = None
         self.previous = None
-
-
-# Queue implementation using a doubly-linked-list.
 
 
 class Queue:

@@ -1,10 +1,12 @@
+"""Stack is an abstract data type that serves as a collection of elements, with two main principal operations: Push, which adds an element to the collection, and Pop, which removes the most recently added element that was not yet removed."""
+
 from python_datastructures.linkedlist import SinglyLinkedList
 from typing import TypeVar
 
 
 T = TypeVar("T")
 
-# Stack implementation using a singly-linked-list.
+
 class Stack:
     def __init__(self):
         self.__stack = SinglyLinkedList()
