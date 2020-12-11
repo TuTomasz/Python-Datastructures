@@ -1,3 +1,6 @@
+"""Circular linked list is a datastructure where every node points to its next node in the sequence but the last node points to the first node in the list. A circular linked list is a sequence of elements in which every element has a link to its next element in the sequence and the last element has a link to the first element."""
+
+
 class Node:
     def __init__(self, value):
         self.value = value

@@ -58,6 +58,8 @@ lint:
 	poetry run black .
 	@echo 🧪 Type Checks with MyPy
 	poetry run mypy python_datastructures/
-	@echo 🧪 Type Checks with MyPy
+	@echo ✅  Type Checks with MyPy
 	#poetry run pylint ./python_datastructures/*.py 
+	@echo 📕 Generate Documentation
+	poetry run pdoc --html  --config show_source_code=False  --output-dir docs python_datastructures/ --force
 
