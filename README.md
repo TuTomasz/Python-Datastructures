@@ -32,7 +32,7 @@ stack = Stack()
 stack.push(3)
 stack.push(4)
 
-print(stack) # returns [4, 3]
+print(stack) # returns [3, 4]
 ```
 ## Documentation
 

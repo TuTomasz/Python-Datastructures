@@ -76,6 +76,17 @@ class SinglyLinkedList:
 
         return True if self.__size == 0 else False
 
+    def toArray(self) -> list:
+
+        """Converts linkedlist to list."""
+
+        arr = []
+        current = self.__head
+        while current:
+            arr.append(current.value)
+            current = current.next
+        return arr
+
     def __str__(self) -> str:
 
         """Return String representation of linkedlist values."""

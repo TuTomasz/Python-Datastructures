@@ -39,6 +39,11 @@ class Test_Queue(unittest.TestCase):
         self.linkedlist.add(4)
         self.assertEqual(self.linkedlist.getHead(), 4)
 
+    def test_toArray(self):
+        self.linkedlist.add(3)
+        self.linkedlist.add(4)
+        self.assertEqual(self.linkedlist.__str__(), "[4, 3]")
+
 
 if __name__ == "__main__":
     unittest.main()

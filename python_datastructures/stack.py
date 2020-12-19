@@ -45,7 +45,7 @@ class Stack:
 
         """Get string representation of the stack."""
 
-        return self.__stack.__str__()
+        return str(self.__stack.toArray()[::-1])
 
 
 if __name__ == "__main__":
