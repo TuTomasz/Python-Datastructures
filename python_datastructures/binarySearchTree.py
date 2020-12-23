@@ -56,15 +56,71 @@ class BST:
             else:
                 return self.__contains(root.right, value)
 
+    def minValueNode(self, node):
+        current = node
+
+        while current.left is not None:
+            current = current.left
+
+        return current
+
     def remove(self, value):
-        pass
+
+        if self.contains(value):
+            if self.size == 1:
+                self.root = None
+                self.size -= 1
+
+            else:
+                self.__remove(self.root, value)
+                self.size -= 1
+        else:
+            pass
+
+    def __remove(self, root, value):
+        def minValueNode(node):
+            current = node
+
+            while current.left is not None:
+                current = current.left
+
+            return current
+
+        if root is None:
+            return root
+
+        if value < root.value:
+            root.left = self.__remove(root.left, value)
+
+        elif value > root.value:
+            root.right = self.__remove(root.right, value)
+
+        else:
+
+            if root.left is None:
+                temp = root.right
+                root = None
+                return temp
+
+            elif root.right is None:
+                temp = root.left
+                root = None
+                return temp
+
+            temp = minValueNode(root.right)
+
+            root.value = temp.value
+
+            root.right = self.__remove(root.right, temp.value)
+
+        return root
 
     def isValid(self):
         pass
 
     def build(self, array):
 
-        self.root = self.__build(array, self.root, 0, len(array) - 1)
+        self.root = self.__build(array, None, 0, len(array) - 1)
 
     def __build(self, array, root, left, right):
 
@@ -76,14 +132,16 @@ class BST:
         if not root:
 
             root = Node(array[mid])
+            self.size += 1
+
         else:
 
-            self.add(array[mid])
+            self.__add(root, array[mid])
 
         self.__build(array, root, left, mid - 1)
         self.__build(array, root, mid + 1, right)
 
-        return self.root
+        return root
 
     def getOrder(self, order="inOrder"):
         def inOrder(root):
@@ -141,7 +199,11 @@ if __name__ == "__main__":
     # print(tree.root.right.value)
 
     tree2 = BST()
-    tree2.build([1, 2, 3, 4, 5, 6, 7, 8, 9])
-    print(tree2.getOrder("preOrder"))
-    print(tree2)
-    print(len(tree2))
+    tree2.build([1, 2, 3])
+    print(tree2, tree2.size)
+    tree2.remove(1)
+    print(tree2, tree2.size)
+    tree2.remove(3)
+    print(tree2, tree2.size)
+    tree2.remove(2)
+    print(tree2, tree2.size)
