@@ -20,7 +20,7 @@ Sample usage of the library. Import any datastructure from the list of supported
 * Queue
 * SinglyLinkedList
 * DoublyLinkedList
-* CircuarList
+* CircularList
 * MaxHeap
 * MinHeap
 * Trie 
@@ -56,8 +56,8 @@ Other usefull development commands include:
 make test               // run tests
 make lint               // code formatting
 make build              // build package localy
-make install-build      // install local package globaly
-make uninstall-build    // uninstall local package gloably
+make install-build      // install local package globally
+make uninstall-build    // uninstall local package gloablly
 ```
 
 ## Contributing
