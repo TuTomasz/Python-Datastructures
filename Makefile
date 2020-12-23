@@ -51,14 +51,14 @@ clean:
 test:
 	@echo 🧪 Running Tests
 	poetry run pytest tests/
+	@echo 🧪 Type Checks with MyPy
+	poetry run mypy python_datastructures/
 
 # format code
 lint:
 	@echo ♻️ Reformatting Code
 	poetry run black .
-	@echo 🧪 Type Checks with MyPy
-	poetry run mypy python_datastructures/
-	@echo ✅  Type Checks with MyPy
+	@echo ✅  Style Checks with MyPy
 	#poetry run pylint ./python_datastructures/*.py 
 	@echo 📕 Generate Documentation
 	poetry run pdoc --html  --config show_source_code=False  --output-dir docs python_datastructures/ --force
