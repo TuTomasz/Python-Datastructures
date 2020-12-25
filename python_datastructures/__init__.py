@@ -5,3 +5,4 @@ from .queue import Queue
 from .linkedlist import SinglyLinkedList
 from .doublylinkedlist import DoublyLinkedList
 from .circularList import CircularList
+from .binarySearchTree import BST

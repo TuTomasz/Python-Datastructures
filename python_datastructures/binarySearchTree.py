@@ -18,7 +18,7 @@ class BST:
         self.root = None
         self.size = 0
 
-    def add(self, value):
+    def add(self, value: T):
         if self.contains(value):
             return False
         elif self.root == None:
@@ -77,7 +77,7 @@ class BST:
         else:
             pass
 
-    def __remove(self, root, value):
+    def __remove(self, root, value: T):
         def minValueNode(node):
             current = node
 
@@ -118,11 +118,11 @@ class BST:
     def isValid(self):
         pass
 
-    def build(self, array):
+    def build(self, array: list) -> None:
 
         self.root = self.__build(array, None, 0, len(array) - 1)
 
-    def __build(self, array, root, left, right):
+    def __build(self, array: list, root, left: int, right: int):
 
         if left > right:
             return
