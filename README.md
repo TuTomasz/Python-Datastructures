@@ -25,14 +25,14 @@ Sample usage of the library. Import any datastructure from the list of supported
 * MinHeap
 * Trie 
 
+![](assets/demo.webp)
+
 ```python
-from python_datastructures import Stack
+from python_datastructures import MinHeap
 
-stack = Stack()
-stack.push(3)
-stack.push(4)
-
-print(stack) # returns [3, 4]
+arr = [2,3,18,29,7,82,1,9]
+heap = MinHeap(arr)
+print(heap.peek()) # returns 1
 ```
 ## Documentation
 
