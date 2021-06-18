@@ -1,4 +1,3 @@
-
 ![Test Build](https://github.com/TuTomasz/Python-Datastructures/workflows/Test%20Build/badge.svg)
 
 ![Screenshot](assets/logo.png)
@@ -14,16 +13,18 @@ pip install python-datastructures
 ```
 
 ## Usage
+
 Sample usage of the library. Import any datastructure from the list of supported datastructures.
 
-* Stack 
-* Queue
-* SinglyLinkedList
-* DoublyLinkedList
-* CircularList
-* MaxHeap
-* MinHeap
-* Trie 
+- Stack
+- Queue
+- DeQueue
+- SinglyLinkedList
+- DoublyLinkedList
+- CircularList
+- MaxHeap
+- MinHeap
+- Trie
 
 ![](assets/demo.webp)
 
@@ -34,15 +35,15 @@ arr = [2,3,18,29,7,82,1,9]
 heap = MinHeap(arr)
 print(heap.peek()) # returns 1
 ```
-## Documentation
 
+## Documentation
 
 Explore the Different data structures and methods associated with them.
 Documentation below describes the various methods associated with each data structure as well as a short description on what it does.
 
 [Read the docs](https://tutomasz.github.io/Python-Datastructures/docs/python_datastructures/index.html)
 
-## Development 
+## Development
 
 To set up dev environment and work on the package clone the repository then run.
 
@@ -61,9 +62,11 @@ make uninstall-build    // uninstall local package gloablly
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
