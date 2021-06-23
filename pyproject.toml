@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-datastructures"
-version = "0.1.2"
+version = "0.1.3"
 description = "Python datastructures package"
 authors = ["Tomasz Turek <ttomaszito@gmail.com>"]
 license = "MIT"

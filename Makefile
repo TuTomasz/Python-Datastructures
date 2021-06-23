@@ -2,7 +2,7 @@
 
 # Setup Constants
 POETRY_VERSION = 1.0.10
-PYTHON_DATASTRUCTURES_VERSION = 0.1.2
+PYTHON_DATASTRUCTURES_VERSION = 0.1.3
 
 # Set up environment and install dependencies
 setup:
